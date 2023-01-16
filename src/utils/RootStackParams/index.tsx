@@ -1,0 +1,25 @@
+export type RootStackParamList = {
+  Login: undefined;
+  Signup: undefined;
+  StackRoutes: undefined;
+  TabRoutes: undefined;
+  Home: undefined;
+  Person: undefined;
+  BasicData: undefined;
+  OptionBank: undefined;
+  Bank: undefined;
+  Security: undefined;
+  TwoFA: undefined;
+  Logs: undefined;
+  Extract: undefined;
+  Report: undefined;
+  Apresentation: undefined;
+  TypeAccount: undefined;
+  BirthdayandGender: undefined;
+  CheckAddressCode: undefined;
+  SendDocument: undefined;
+  SendDocumentPersol: undefined;
+  BirthdayandGenderPersonal: undefined;
+  CompletOnboarding: undefined;
+  ConfirmedPlan: undefined;
+};
