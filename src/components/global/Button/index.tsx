@@ -1,19 +1,25 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {TouchableOpacityProps} from 'react-native';
 
-import {Container, ContentLinear, Title} from './styles';
+import {Container, Content, ContentLinear, Title} from './styles';
 
 type IPropsButton = TouchableOpacityProps & {
   title: string;
-  type?: string;
+  type?: boolean;
 };
 
-export function Button() {
+export function Button({title, type, ...rest}: IPropsButton) {
   return (
     <Container>
-      <ContentLinear>
-        <Title>teste</Title>
-      </ContentLinear>
+      {type ? (
+        <ContentLinear>
+          <Title>{title}</Title>
+        </ContentLinear>
+      ) : (
+        <Content>
+          <Title>{title}</Title>
+        </Content>
+      )}
     </Container>
   );
 }

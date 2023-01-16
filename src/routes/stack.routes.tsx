@@ -4,7 +4,7 @@ import type {RootStackParamList} from '../utils/RootStackParams';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-const {Navigator, Screen} = createNativeStackNavigator<RootStackParamList>();
+const {Navigator} = createNativeStackNavigator<RootStackParamList>();
 
 import {Signin} from '../screens/Signin';
 

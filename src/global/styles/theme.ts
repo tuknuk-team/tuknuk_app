@@ -3,6 +3,7 @@ export default {
     primary: '#0245F4',
     background: '#FFFFFF',
     border: '#C4C4C4',
+    borderButton: '#2FA5FB',
     secondary: 'rgba(22, 99, 216, 0.2)',
     text: '#231F20',
     textButton: '#FFFFFF',
