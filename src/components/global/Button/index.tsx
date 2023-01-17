@@ -6,11 +6,12 @@ import {Container, Content, ContentLinear, Title} from './styles';
 type IPropsButton = TouchableOpacityProps & {
   title: string;
   type?: boolean;
+  full?: boolean;
 };
 
-export function Button({title, type, ...rest}: IPropsButton) {
+export function Button({title, type, full, ...rest}: IPropsButton) {
   return (
-    <Container>
+    <Container full={full}>
       {type ? (
         <ContentLinear>
           <Title>{title}</Title>

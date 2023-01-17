@@ -6,16 +6,16 @@ interface type {
   type: boolean;
 }
 
-export const Container = styled.ImageBackground`
+export const Container = styled.View``;
+
+export const ContentBg = styled.ImageBackground`
   height: ${getStatusBarHeight() + RFValue(120)}px;
-  padding: ${RFValue(0)}px ${RFValue(20)}px;
 `;
 
 export const ButtonDefault = styled.TouchableOpacity`
-  width: ${RFValue(50)}px;
-  height: ${RFValue(50)}px;
   align-items: center;
   justify-content: center;
+  padding: ${RFValue(45)}px;
 `;
 
 export const Content = styled.View<type>`
@@ -26,7 +26,7 @@ export const Content = styled.View<type>`
   ${({type}) =>
     type &&
     css`
-      /* background-color: ${({theme}) => theme.colors.textButton}; */
+      justify-content: center;
     `}
 `;
 

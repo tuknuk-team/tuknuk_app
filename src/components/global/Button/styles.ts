@@ -1,27 +1,36 @@
 import {RFValue} from 'react-native-responsive-fontsize';
 import LinearGradient from 'react-native-linear-gradient';
-import styled from 'styled-components/native';
+import styled, {css} from 'styled-components/native';
 interface type {
   type: boolean;
 }
+interface full {
+  full: boolean;
+}
 
-export const Container = styled.TouchableOpacity``;
+export const Container = styled.TouchableOpacity<full>`
+  width: 100%;
+  ${({full}) =>
+    !full &&
+    css`
+      width: 37%;
+    `}
+`;
 
-export const Content = styled.View<type>`
+export const Content = styled.View`
   border-radius: ${RFValue(20)}px;
   border-width: 1px;
-  /* border-color: ${({theme}) => theme.colors.borderButton}; */
-  border-color: ${({theme, type}) =>
-    type ? theme.colors.borderButton : theme.colors.borderButton};
+  border-color: ${({theme}) => theme.colors.borderButton};
   padding: ${RFValue(10)}px;
-  width: ${RFValue(120)}px;
+  width: 100%;
   align-items: center;
   justify-content: center;
 `;
 
 export const Title = styled.Text`
   color: ${({theme}) => theme.colors.textButton};
-  font-family: ${({theme}) => theme.fonts.bold};
+  font-family: ${({theme}) => theme.fonts.semiBold};
+  font-size: ${RFValue(14)}px;
 `;
 
 export const ContentLinear = styled(LinearGradient).attrs({
@@ -31,7 +40,6 @@ export const ContentLinear = styled(LinearGradient).attrs({
 })`
   border-radius: ${RFValue(20)}px;
   padding: ${RFValue(10)}px;
-  width: ${RFValue(120)}px;
   align-items: center;
   justify-content: center;
 `;
