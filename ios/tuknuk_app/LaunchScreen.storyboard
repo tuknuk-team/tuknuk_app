@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroudColor" translatesAutoresizingMaskIntoConstraints="NO" id="kq3-KR-1Bl">
-                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="bgU-s2-oZF">
                                 <rect key="frame" x="67.5" y="269.5" width="240" height="128"/>
@@ -27,11 +28,14 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wj5-JC-OBM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kq3-KR-1Bl" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="Erw-es-6AN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kq3-KR-1Bl" secondAttribute="trailing" id="Qjo-7v-Rz9"/>
                             <constraint firstItem="bgU-s2-oZF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ufc-Gh-IVR"/>
+                            <constraint firstItem="kq3-KR-1Bl" firstAttribute="leading" secondItem="Wj5-JC-OBM" secondAttribute="leading" id="geB-pP-peD"/>
+                            <constraint firstItem="Wj5-JC-OBM" firstAttribute="trailing" secondItem="kq3-KR-1Bl" secondAttribute="trailing" id="jtm-wo-5yW"/>
                             <constraint firstItem="bgU-s2-oZF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rbF-Q7-w63"/>
                             <constraint firstItem="kq3-KR-1Bl" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="u2I-Zj-2QR"/>
                             <constraint firstAttribute="bottomMargin" secondItem="kq3-KR-1Bl" secondAttribute="bottom" id="yM1-ye-tPm"/>
