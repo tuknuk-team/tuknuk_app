@@ -7,11 +7,18 @@ type IPropsButton = TouchableOpacityProps & {
   title: string;
   type?: boolean;
   full?: boolean;
+  handlePress?: () => void;
 };
 
-export function Button({title, type, full, ...rest}: IPropsButton) {
+export function Button({
+  title,
+  type,
+  full,
+  handlePress,
+  ...rest
+}: IPropsButton) {
   return (
-    <Container full={full}>
+    <Container full={full} onPress={handlePress}>
       {type ? (
         <ContentLinear>
           <Title>{title}</Title>

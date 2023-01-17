@@ -8,7 +8,9 @@ import {TabRoutes} from './tab.routes';
 
 const {Navigator} = createNativeStackNavigator<RootStackParamList>();
 
-import {Signin} from '../screens/Signin';
+import {Signin} from '../screens/Auth/Signin';
+import {Validator} from '../screens/Auth/Validator';
+import {Verify} from '../screens/Auth/Verify';
 import {Initial} from '../screens/Initial';
 
 const Stack = createNativeStackNavigator();
@@ -18,13 +20,23 @@ export default function StackRoutes() {
     <NavigationContainer>
       <Navigator initialRouteName="Initial">
         <Stack.Screen
+          name="Initial"
+          component={Initial}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
           name="Signin"
           component={Signin}
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="Initial"
-          component={Initial}
+          name="Validator"
+          component={Validator}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Verify"
+          component={Verify}
           options={{headerShown: false}}
         />
         <Stack.Screen

@@ -10,13 +10,13 @@ import {
   ForgotText,
 } from './styles';
 
-import BG from '../../assets/global/png/bgContainer.png';
-import IconEyeClose from '../../assets/global/svg/iconEyeClosed.svg';
-import IconEye from '../../assets/global/svg/iconEye.svg';
+import BG from '../../../assets/global/png/bgContainer.png';
+import IconEyeClose from '../../../assets/global/svg/iconEyeClosed.svg';
+import IconEye from '../../../assets/global/svg/iconEye.svg';
 
-import {Header} from '../../components/global/Header';
-import {Button} from '../../components/global/Button';
-import {InputForm} from '../../components/global/InputForm';
+import {Header} from '../../../components/global/Header';
+import {Button} from '../../../components/global/Button';
+import {InputForm} from '../../../components/global/InputForm';
 
 import * as yup from 'yup';
 import {useForm} from 'react-hook-form';
@@ -26,9 +26,10 @@ import {useFocusEffect, useNavigation} from '@react-navigation/native';
 export function Signin() {
   const navigation = useNavigation();
 
-  const [onFocus, setOnFocus] = useState<'email' | 'password'>('');
+  const [onFocus, setOnFocus] = useState<'email' | 'password' | 'phone'>('');
   const [isError, setIsError] = useState<boolean>();
   const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [isLinear, setLinear] = useState<boolean>(false);
 
   const schema = yup.object({
     email: yup.string().email('E-mail invalido').required('Informe seu email'),
@@ -51,29 +52,55 @@ export function Signin() {
     setOnFocus(value);
   }
 
+  function changeTypeEmail() {
+    setLinear(false);
+  }
+
+  function changeTypePhone() {
+    setLinear(true);
+  }
+
   return (
     <Container source={BG}>
       <Header title="Login" bg={true} bt={true} />
       <ContentButton>
         <Button
           title="Email"
-          type={true}
-          onPress={() => navigation.navigate('TabRoutes')}
+          type={!isLinear}
+          handlePress={() => changeTypeEmail()}
         />
-        <Button title="Telefone" type={false} />
+        <Button
+          title="Telefone"
+          type={isLinear}
+          handlePress={() => changeTypePhone()}
+        />
       </ContentButton>
       <ContentInput>
-        <InputForm
-          name="email"
-          control={control}
-          typeError={isError}
-          placeholder="Email"
-          placeholderTextColor={'#707070'}
-          onFocus={() => cleanError('email')}
-          isFocused={onFocus === 'email'}
-          autoCapitalize="none"
-          keyboardType="email-address"
-        />
+        {!isLinear ? (
+          <InputForm
+            name="email"
+            control={control}
+            typeError={isError}
+            placeholder="Email"
+            placeholderTextColor={'#707070'}
+            onFocus={() => cleanError('email')}
+            isFocused={onFocus === 'email'}
+            autoCapitalize="none"
+            keyboardType="email-address"
+          />
+        ) : (
+          <InputForm
+            name="phone"
+            control={control}
+            typeError={isError}
+            placeholder="Telefone"
+            placeholderTextColor={'#707070'}
+            onFocus={() => cleanError('phone')}
+            isFocused={onFocus === 'phone'}
+            autoCapitalize="none"
+            keyboardType="numeric"
+          />
+        )}
         <ViewLinear />
         <InputForm
           control={control}
