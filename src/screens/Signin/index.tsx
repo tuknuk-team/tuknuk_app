@@ -55,7 +55,11 @@ export function Signin() {
     <Container source={BG}>
       <Header title="Login" bg={true} bt={true} />
       <ContentButton>
-        <Button title="Email" type={true} />
+        <Button
+          title="Email"
+          type={true}
+          onPress={() => navigation.navigate('TabRoutes')}
+        />
         <Button title="Telefone" type={false} />
       </ContentButton>
       <ContentInput>

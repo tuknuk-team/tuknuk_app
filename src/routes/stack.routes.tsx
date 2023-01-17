@@ -4,6 +4,8 @@ import type {RootStackParamList} from '../utils/RootStackParams';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+import {TabRoutes} from './tab.routes';
+
 const {Navigator} = createNativeStackNavigator<RootStackParamList>();
 
 import {Signin} from '../screens/Signin';
@@ -23,6 +25,11 @@ export default function StackRoutes() {
         <Stack.Screen
           name="Initial"
           component={Initial}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="TabRoutes"
+          component={TabRoutes}
           options={{headerShown: false}}
         />
       </Navigator>
