@@ -20,7 +20,7 @@ import {InputForm} from '../../../components/global/InputForm';
 import * as yup from 'yup';
 import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
-import {useFocusEffect, useNavigation} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 export function Validator() {
   const navigation = useNavigation();

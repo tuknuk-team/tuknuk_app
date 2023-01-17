@@ -1,7 +1,8 @@
 export type RootStackParamList = {
+  Initial: undefined;
   Signin: undefined;
   Validator: undefined;
   Verify: undefined;
-  Initial: undefined;
+  CompletAccount: undefined;
   TabRoutes: undefined;
 };

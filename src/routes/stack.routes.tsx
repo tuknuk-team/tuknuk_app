@@ -11,6 +11,7 @@ const {Navigator} = createNativeStackNavigator<RootStackParamList>();
 import {Signin} from '../screens/Auth/Signin';
 import {Validator} from '../screens/Auth/Validator';
 import {Verify} from '../screens/Auth/Verify';
+import {CompletAccount} from '../screens/Auth/CompletAccount';
 import {Initial} from '../screens/Initial';
 
 const Stack = createNativeStackNavigator();
@@ -37,6 +38,11 @@ export default function StackRoutes() {
         <Stack.Screen
           name="Verify"
           component={Verify}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="CompletAccount"
+          component={CompletAccount}
           options={{headerShown: false}}
         />
         <Stack.Screen

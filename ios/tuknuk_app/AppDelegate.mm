@@ -57,6 +57,7 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+  [NSThread sleepForTimeInterval:2.000];//time delay
   return YES;
 }
 
