@@ -22,7 +22,7 @@ export default function StackRoutes() {
       <Navigator initialRouteName="Initial">
         <Stack.Screen
           name="Initial"
-          component={CompletAccount}
+          component={Initial}
           options={{headerShown: false}}
         />
         <Stack.Screen

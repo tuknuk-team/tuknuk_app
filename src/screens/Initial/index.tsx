@@ -15,8 +15,8 @@ export function Initial() {
     navigation.navigate('Validator');
   }
 
-  function signIn() {
-    navigation.navigate('Signin');
+  function handleNavigation(route: string) {
+    navigation.navigate(route);
   }
 
   return (
@@ -28,13 +28,15 @@ export function Initial() {
             title="Cadastrar uma conta"
             type={true}
             full={true}
-            handlePress={() => Validate()}
+            // handlePress={() => Validate()}
+            onPress={() => handleNavigation('Validator')}
           />
           <Button
             title="Logar em uma conta"
             type={false}
             full={true}
-            handlePress={() => signIn()}
+            onPress={() => handleNavigation('Signin')}
+            // handlePress={() => signIn()}/
           />
         </ContentButton>
       </Content>

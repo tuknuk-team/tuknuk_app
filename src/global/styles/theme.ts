@@ -1,6 +1,6 @@
 export default {
   colors: {
-    primary: '#0245F4',
+    primary: '#2C3D6D',
     background: '#FFFFFF',
     border: '#C4C4C4',
     borderButton: '#2FA5FB',

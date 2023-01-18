@@ -75,13 +75,15 @@ export function TabRoutes() {
       }}
       screenOptions={{
         headerShown: false,
-        tabBarInactiveTintColor: theme.colors.primary,
-        tabBarActiveTintColor: theme.colors.primary,
+        // tabBarInactiveTintColor: theme.colors.primary,
+        // tabBarActiveTintColor: theme.colors.primary,
         unmountOnBlur: true,
         tabBarStyle: {
+          height: 60,
           borderTopColor: '#0008',
-          paddingTop: 10,
-          borderTopWidth: 0.2,
+          paddingTop: 25,
+          // borderTopWidth: 0.2,
+
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: '#0008',
@@ -92,10 +94,11 @@ export function TabRoutes() {
         name="HomeStack"
         component={HomeStack}
         options={{
-          //   tabBarLabelPosition: 'below-icon',
-          //   tabBarLabel: ({focused}) => (
-
-          //   ),
+          tabBarLabelPosition: 'below-icon',
+          tabBarLabel: ({focused}) => (
+            <Text
+              style={focused ? styles.textActive : styles.textInactive}></Text>
+          ),
           tabBarIcon: ({focused}) =>
             focused ? (
               <IconHome width={RFValue(22)} height={RFValue(22)} />

@@ -121,7 +121,12 @@ export function Signin() {
         <ForgotText>Esqueceu sua senha ?</ForgotText>
       </ContentForgot>
       <ContentFooter>
-        <Button title="Entrar" type={true} full={true} />
+        <Button
+          title="Entrar"
+          type={true}
+          full={true}
+          onPress={() => navigation.navigate('TabRoutes')}
+        />
       </ContentFooter>
     </Container>
   );
