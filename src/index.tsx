@@ -10,7 +10,7 @@ import StackRoutes from './routes/stack.routes';
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar barStyle="dark-content" backgroundColor="#000" />
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
       <StackRoutes />
     </ThemeProvider>
   );
