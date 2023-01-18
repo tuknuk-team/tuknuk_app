@@ -1,39 +1,70 @@
-import React, {useState} from 'react';
-import {
-  ButtonDefault,
-  Content,
-  Container,
-  ContentUSer,
-  Text,
-  ImageUser,
-  TextBold,
-} from './styles';
-import IconBack from '../../../assets/global/svg/arrowBack.svg';
-import IconUser from '../../../assets/Tab/svg/IconAvatar.svg';
-import IconTukNuk from '../../../assets/Tab/svg/LogoMain.svg';
-import IconNotication from '../../../assets/Tab/svg/IconNotication.svg';
+import React from 'react';
+import {TouchableOpacityProps} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import {RFValue} from 'react-native-responsive-fontsize';
 
-import Bg from '../../../assets/global/png/teste.png';
+import {
+  Container,
+  Content,
+  Avatar,
+  ButtonDefault,
+  ContentLogo,
+  ContentAvatar,
+  ButtonDefaultBack,
+  ContentName,
+  TextName,
+  Text,
+} from './styles';
 
-export function HeaderUser() {
+import IconArrow from '../../../assets/global/svg/arrowBack.svg';
+import IconLogo from '../../../assets/global/svg/iconLogo.svg';
+import IconNotify from '../../../assets/global/svg/iconNotify.svg';
+
+import bgHeader from '../../../assets/global/png/bgHeaderUser.png';
+
+type IPropsHeader = TouchableOpacityProps & {
+  data?: any;
+  type?: boolean;
+  bt?: boolean;
+  bn?: boolean;
+};
+
+export function HeaderUser({data, type, bt, bn, ...rest}: IPropsHeader) {
+  const navigation = useNavigation();
+
   return (
-    <Container source={Bg}>
-      <IconTukNuk />
-      <Content>
-        <ButtonDefault>
-          <IconBack width={RFValue(10)} height={RFValue(15)} />
-        </ButtonDefault>
-        <ContentUSer>
-          <IconUser width={RFValue(60)} height={RFValue(55)} />
-          <Text>
-            Olá,
-            <TextBold> José</TextBold>
-          </Text>
-        </ContentUSer>
+    <Container source={bgHeader}>
+      <ContentLogo>
+        <IconLogo />
+      </ContentLogo>
+      <Content {...rest} type={type}>
+        {bt ? (
+          <ButtonDefaultBack onPress={() => navigation.goBack()}>
+            <IconArrow />
+          </ButtonDefaultBack>
+        ) : (
+          <ButtonDefault />
+        )}
+        <ContentAvatar>
+          <Avatar
+            source={{
+              uri: data.avatar,
+            }}
+          />
+        </ContentAvatar>
 
-        <IconNotication />
+        {bn ? (
+          <ButtonDefault onPress={() => navigation.goBack()}>
+            <IconNotify width={RFValue(40)} height={RFValue(40)} />
+          </ButtonDefault>
+        ) : (
+          <ButtonDefault />
+        )}
       </Content>
+      <ContentName>
+        <Text>Olá</Text>
+        {data ? <TextName>, {data.name}</TextName> : null}
+      </ContentName>
     </Container>
   );
 }
