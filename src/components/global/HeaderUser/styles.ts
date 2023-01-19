@@ -7,7 +7,7 @@ interface type {
 }
 
 export const Container = styled.ImageBackground`
-  height: ${getStatusBarHeight() + RFValue(165)}px;
+  height: ${getStatusBarHeight() + RFValue(155)}px;
 `;
 
 export const ContentLogo = styled.View`
@@ -52,7 +52,7 @@ export const ContentName = styled.View`
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  margin-top: ${RFValue(7)};
+  margin-top: ${RFValue(10)};
 `;
 
 export const Text = styled.Text`

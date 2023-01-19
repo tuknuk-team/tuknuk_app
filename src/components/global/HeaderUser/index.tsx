@@ -19,6 +19,7 @@ import {
 import IconArrow from '../../../assets/global/svg/arrowBack.svg';
 import IconLogo from '../../../assets/global/svg/iconLogo.svg';
 import IconNotify from '../../../assets/global/svg/iconNotify.svg';
+import IconUser from '../../../assets/global/svg/iconUser.svg';
 
 import bgHeader from '../../../assets/global/png/bgHeaderUser.png';
 
@@ -46,15 +47,19 @@ export function HeaderUser({data, type, bt, bn, ...rest}: IPropsHeader) {
           <ButtonDefault />
         )}
         <ContentAvatar>
-          <Avatar
-            source={{
-              uri: data.avatar,
-            }}
-          />
+          {data.avatar ? (
+            <Avatar
+              source={{
+                uri: data.avatar,
+              }}
+            />
+          ) : (
+            <IconUser />
+          )}
         </ContentAvatar>
 
         {bn ? (
-          <ButtonDefault onPress={() => navigation.goBack()}>
+          <ButtonDefault>
             <IconNotify width={RFValue(40)} height={RFValue(40)} />
           </ButtonDefault>
         ) : (
@@ -63,7 +68,7 @@ export function HeaderUser({data, type, bt, bn, ...rest}: IPropsHeader) {
       </Content>
       <ContentName>
         <Text>Olá</Text>
-        {data ? <TextName>, {data.name}</TextName> : null}
+        {data.name ? <TextName>, {data.name}</TextName> : null}
       </ContentName>
     </Container>
   );

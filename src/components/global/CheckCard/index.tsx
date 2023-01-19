@@ -1,4 +1,5 @@
 import React from 'react';
+import {TouchableOpacityProps} from 'react-native';
 
 import IconLocation from '../../../assets/global/svg/iconLocation.svg';
 import IconArrowRight from '../../../assets/global/svg/arrowRigh.svg';
@@ -14,19 +15,19 @@ import {
   Title,
 } from './styles';
 
-interface Props {
+type IPropsButton = TouchableOpacityProps & {
   textConnectNow: string;
   locationTitle: string;
   street: string;
   alternativeTheme: boolean;
-}
+};
 
 export function CheckCard({
   textConnectNow,
   locationTitle,
   street,
   alternativeTheme,
-}: Props) {
+}: IPropsButton) {
   return (
     <Container>
       <ContainerLinear otherTheme={alternativeTheme}>

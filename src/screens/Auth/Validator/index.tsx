@@ -49,8 +49,8 @@ export function Validator() {
     setOnFocus(value);
   }
 
-  function handleNavigate() {
-    navigation.navigate('Verify');
+  function handleNavigation(route: string) {
+    navigation.navigate(route);
   }
 
   return (
@@ -80,7 +80,7 @@ export function Validator() {
           title="Continuar"
           type={true}
           full={true}
-          handlePress={() => handleNavigate()}
+          onPress={() => handleNavigation('Verify')}
         />
       </ContentFooter>
     </Container>

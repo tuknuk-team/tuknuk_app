@@ -42,6 +42,7 @@ export function Verify() {
     setResult(result);
 
     if (result?.length >= 4) {
+      handleNavigate();
     }
   }, [
     navigation,
@@ -58,7 +59,7 @@ export function Verify() {
   ]);
 
   function handleNavigate() {
-    navigation.navigate('Signin');
+    navigation.navigate('HomeDesable');
   }
 
   function ClearPin() {
@@ -75,6 +76,7 @@ export function Verify() {
   }
 
   function handleGoBack() {
+    console.log('aq');
     ClearPin();
   }
 
@@ -143,12 +145,6 @@ export function Verify() {
         </ViewButton>
       </Body>
       <ContentFooter>
-        {/* <Button
-          title="Confirmar código"
-          type={true}
-          full={true}
-          handlePress={() => handleNavigate()}
-        /> */}
         <Description>Reenviar código</Description>
       </ContentFooter>
     </Container>

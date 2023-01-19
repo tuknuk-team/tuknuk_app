@@ -11,6 +11,7 @@ const {Navigator} = createNativeStackNavigator<RootStackParamList>();
 import {Signin} from '../screens/Auth/Signin';
 import {Validator} from '../screens/Auth/Validator';
 import {Verify} from '../screens/Auth/Verify';
+import {HomeDesable} from '../screens/Lawsuit/HomeDesable';
 import {CompletAccount} from '../screens/Auth/CompletAccount';
 import {Initial} from '../screens/Initial';
 
@@ -38,6 +39,11 @@ export default function StackRoutes() {
         <Stack.Screen
           name="Verify"
           component={Verify}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="HomeDesable"
+          component={HomeDesable}
           options={{headerShown: false}}
         />
         <Stack.Screen

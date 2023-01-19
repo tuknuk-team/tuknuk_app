@@ -12,6 +12,7 @@ export const Container = styled.TouchableOpacity`
 export const Content = styled.View`
   flex-direction: row;
   /* align-items: center; */
+  margin-top: ${RFValue(5)}px;
 `;
 
 export const ImageEstablish = styled.Image.attrs({})`

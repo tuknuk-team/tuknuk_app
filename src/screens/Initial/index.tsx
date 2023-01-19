@@ -1,4 +1,6 @@
 import React from 'react';
+import LottieView from 'lottie-react-native';
+import {useNavigation} from '@react-navigation/native';
 
 import {Container, Content, ContentButton} from './styles';
 
@@ -6,7 +8,6 @@ import BG from '../../assets/global/png/bgInitial.png';
 
 import {Header} from '../../components/global/Header';
 import {Button} from '../../components/global/Button';
-import {useNavigation} from '@react-navigation/native';
 
 export function Initial() {
   const navigation = useNavigation();
@@ -23,6 +24,11 @@ export function Initial() {
     <Container source={BG}>
       <Header title="Conecte-se" bg={false} type={true} />
       <Content>
+        {/* <LottieView
+          source={require('../assets/animation.json')}
+          autoPlay
+          loop
+        /> */}
         <ContentButton>
           <Button
             title="Cadastrar uma conta"

@@ -26,6 +26,10 @@ export const ContentIconsInput = styled.View`
   margin-right: ${RFValue(10)}px;
 `;
 
+export const ContentValidate = styled.View`
+  padding: ${RFValue(20)}px ${RFValue(15)}px ${RFValue(5)}px ${RFValue(15)}px;
+`;
+
 export const ButtonDefault = styled.TouchableOpacity``;
 
 export const TextInput = styled.TextInput`
@@ -36,13 +40,17 @@ export const TextInput = styled.TextInput`
   color: ${({theme}) => theme.colors.colorText};
 `;
 
-export const Contentestablishment = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+export const Obfuscate = styled.View`
+  /* background-color: 'rgba(135, 137, 141, 0.9)'; */
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  position: absolute;
+  margin-top: ${RFValue(210)}px;
 `;
 
 export const Content = styled.View`
-  padding: ${RFValue(22)}px;
+  color: 'rgba(0,0,0,0.9)';
   flex: 1;
+  margin-top: ${RFValue(10)}px;
 `;

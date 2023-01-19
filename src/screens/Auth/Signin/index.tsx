@@ -67,12 +67,12 @@ export function Signin() {
         <Button
           title="Email"
           type={!isLinear}
-          handlePress={() => changeTypeEmail()}
+          onPress={() => changeTypeEmail()}
         />
         <Button
           title="Telefone"
           type={isLinear}
-          handlePress={() => changeTypePhone()}
+          onPress={() => changeTypePhone()}
         />
       </ContentButton>
       <ContentInput>
