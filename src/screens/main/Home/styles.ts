@@ -8,16 +8,19 @@ export const Container = styled.ImageBackground`
 export const ContentInput = styled.View`
   border-radius: ${RFValue(20)}px;
   width: 67%;
-  margin-top: ${RFValue(12)}px;
   flex-direction: row;
   align-items: center;
+  height: ${RFValue(35)}px;
   justify-content: space-between;
   border-width: 0.1667px;
   padding: ${RFValue(8)}px ${RFValue(10)}px;
   border-color: #707070;
+  position: absolute;
   align-self: center;
-
+  bottom: 0;
+  top: 190px;
   background-color: ${({theme}) => theme.colors.primary};
+  margin-bottom: ${RFValue(12)}px;
 `;
 
 export const ContentIconsInput = styled.View`
