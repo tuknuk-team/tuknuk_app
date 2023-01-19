@@ -39,7 +39,7 @@ export function Chat() {
       </ContentHeader>
       <ContentInput>
         <TextInput placeholder="Buscar" placeholderTextColor="#707070" />
-        <IconSearch />
+        {/* <IconSearch width={RFValue(20)} height={RFValue(20)} /> */}
       </ContentInput>
       <ViewLinear />
 

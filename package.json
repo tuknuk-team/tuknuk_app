@@ -17,7 +17,6 @@
     "@types/styled-components-react-native": "^5.2.1",
     "formik": "^2.2.9",
     "lottie-ios": "3.1.8",
-    "lottie-react-native": "3.5.0",
     "react": "18.1.0",
     "react-hook-form": "^7.42.1",
     "react-native": "0.70.6",

@@ -18,7 +18,6 @@ export const ContentIcons = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /* background-color: red; */
   width: 20%;
 `;
 
@@ -45,18 +44,26 @@ export const ContentInput = styled.View`
   flex-direction: row;
   align-self: center;
   align-items: center;
+  height: ${RFValue(40)}px;
+  margin-top: ${RFValue(20)}px;
   justify-content: space-between;
-  margin: ${RFValue(10)}px 0;
-  margin-top: ${RFValue(30)}px;
+
+  width: 72%;
+`;
+
+export const ContentTitles = styled.View`
+  justify-content: space-between;
   /* background-color: red; */
-  width: 63%;
+  height: ${RFValue(40)}px;
+  margin-right: ${RFValue(70)}px;
+  margin-left: ${RFValue(10)}px;
 `;
 
 export const TextInput = styled.TextInput`
   font-size: ${RFValue(14)}px;
   font-family: ${({theme}) => theme.fonts.light};
   color: ${({theme}) => theme.colors.textButton};
-  text-align: right;
+  /* text-align: right; */
   /* background-color: red; */
 `;
 

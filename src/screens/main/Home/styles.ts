@@ -16,11 +16,17 @@ export const ContentInput = styled.View`
   padding: ${RFValue(8)}px ${RFValue(10)}px;
   border-color: #707070;
   align-self: center;
+<<<<<<< Updated upstream
+=======
+  bottom: 0;
+  top: 210px;
+>>>>>>> Stashed changes
   background-color: ${({theme}) => theme.colors.primary};
 `;
 
 export const ContentIconsInput = styled.View`
   flex-direction: row;
+  /* margin-top: ${RFValue(40)}px; */
   justify-content: space-between;
   width: 20%;
   margin-right: ${RFValue(10)}px;
@@ -51,6 +57,8 @@ export const Obfuscate = styled.View`
 
 export const Content = styled.View`
   color: 'rgba(0,0,0,0.9)';
+  padding: ${RFValue(22)}px;
+  margin-top: ${RFValue(20)}px;
   flex: 1;
   margin-top: ${RFValue(10)}px;
 `;

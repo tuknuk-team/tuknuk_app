@@ -13,11 +13,6 @@ export const ContentText = styled.View``;
 export const Content = styled.View`
   flex-direction: row;
   align-items: center;
-  /* border-bottom-width: 1px; */
-
-  /* justify-content: space-between; */
-  /* border-bottom-width: 1px; */
-  /* width: ${RFValue(50)}px; */
 `;
 
 export const ContentBar = styled.View`
@@ -44,7 +39,7 @@ export const ContentTitles = styled.View`
   justify-content: space-between;
   /* background-color: red; */
   height: ${RFValue(40)}px;
-  margin-right: ${RFValue(70)}px;
+  margin-right: ${RFValue(60)}px;
   margin-left: ${RFValue(10)}px;
 `;
 

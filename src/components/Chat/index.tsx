@@ -25,7 +25,7 @@ export function Chat() {
           <TextUSer>Olá! Tudo bem? Gostaria de…</TextUSer>
         </ContentTitles>
         <ContentHours>
-          <Texthours>1h</Texthours>
+          <Texthours>1 h</Texthours>
         </ContentHours>
       </Content>
       <ContentBar />

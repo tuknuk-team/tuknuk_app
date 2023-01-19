@@ -95,7 +95,7 @@ export function TabRoutes() {
         tabBarStyle: {
           height: 65,
           borderTopColor: '#0008',
-          paddingTop: 30,
+          paddingTop: 10,
           borderTopWidth: 0.2,
           // position: 'absolute',
 
@@ -161,7 +161,7 @@ export function TabRoutes() {
             focused ? (
               <IconChatFocused width={RFValue(40)} height={RFValue(40)} />
             ) : (
-              <IconChat width={RFValue(22)} height={RFValue(22)} />
+              <IconChat width={RFValue(20)} height={RFValue(20)} />
             ),
         }}
       />
@@ -184,8 +184,8 @@ const styles = StyleSheet.create({
   },
   buttonmaps: {
     marginBottom: RFValue(40),
-    position: 'absolute',
-    top: -50,
+    // position: 'absolute',
+    // top: -30,
     elevation: 2,
   },
   btnBAr: {

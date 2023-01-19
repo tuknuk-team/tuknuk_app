@@ -12,7 +12,7 @@ export const Content = styled.View`
 
 export const ContentButton = styled.View`
   margin-bottom: ${RFValue(30)}px;
-  padding: ${RFValue(30)}px;
+  padding: ${RFValue(20)}px ${RFValue(30)}px;
   height: ${RFValue(150)}px;
   justify-content: space-between;
 `;
