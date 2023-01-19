@@ -4,6 +4,7 @@ import {RFValue} from 'react-native-responsive-fontsize';
 import IconNewChat from '../../../assets/Chat/svg/iconChat.svg';
 import IconNew from '../../../assets/Chat/svg/IconNew.svg';
 import IconSearch from '../../../assets/Tab/svg/iconSearch.svg';
+import {Chat as Chats} from '../../../components/Chat';
 
 import {
   Container,
@@ -11,9 +12,15 @@ import {
   TextInput,
   ViewLinear,
   ContentInput,
+  TextUSer,
   ContentIcons,
   ContentHeader,
   ButtonDefault,
+  ContentHours,
+  Texthours,
+  Content,
+  TextTitle,
+  ContentTitles,
 } from './styles';
 
 export function Chat() {
@@ -35,6 +42,10 @@ export function Chat() {
         <IconSearch />
       </ContentInput>
       <ViewLinear />
+
+      <Content>
+        <Chats />
+      </Content>
     </Container>
   );
 }

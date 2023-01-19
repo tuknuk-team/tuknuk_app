@@ -35,6 +35,12 @@ export const ViewLinear = styled(LinearGradient).attrs({
   border-radius: 10px;
 `;
 
+export const Content = styled.View`
+  padding: ${RFValue(23)}px;
+  flex-direction: row;
+  align-items: center;
+`;
+
 export const ContentInput = styled.View`
   flex-direction: row;
   align-self: center;
@@ -61,3 +67,26 @@ export const ContentHeader = styled.View`
   padding: 0 ${RFValue(30)}px;
   justify-content: space-between;
 `;
+
+export const TextTitle = styled.Text`
+  font-size: ${RFValue(14)}px;
+  font-family: ${({theme}) => theme.fonts.bold};
+  color: ${({theme}) => theme.colors.textButton};
+  /* text-align: right; */
+`;
+
+export const TextUSer = styled.Text`
+  font-size: ${RFValue(11)}px;
+  font-family: ${({theme}) => theme.fonts.regular};
+  color: ${({theme}) => theme.colors.textButton};
+`;
+
+export const ContentHours = styled.View``;
+
+export const Texthours = styled.Text`
+  font-size: ${RFValue(11)}px;
+  font-family: ${({theme}) => theme.fonts.regular};
+  color: ${({theme}) => theme.colors.textButton};
+`;
+
+// export const C;
