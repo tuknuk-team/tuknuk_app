@@ -11,12 +11,15 @@ export const ContentInput = styled.View`
   margin-top: ${RFValue(-15)}px;
   flex-direction: row;
   align-items: center;
+  height: ${RFValue(35)}px;
   justify-content: space-between;
   border-width: 0.1667px;
   padding: ${RFValue(8)}px ${RFValue(10)}px;
   border-color: #707070;
+  position: absolute;
   align-self: center;
   background-color: ${({theme}) => theme.colors.primary};
+  margin-bottom: ${RFValue(12)}px;
 `;
 
 export const ContentIconsInput = styled.View`
