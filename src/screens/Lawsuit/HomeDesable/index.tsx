@@ -37,7 +37,7 @@ export function HomeDesable() {
 
   return (
     <Container source={Bg} resizeMode="cover">
-      <HeaderUser data={data} />
+      <HeaderUser data={data} bt={true} />
       <ContentInput>
         <TextInput />
         <ContentIconsInput>

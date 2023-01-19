@@ -26,7 +26,7 @@ export const ContentIconsInput = styled.View`
   margin-right: ${RFValue(10)}px;
 `;
 
-export const ContentValidate = styled.View`
+export const ContentValidate = styled.TouchableOpacity`
   padding: ${RFValue(20)}px ${RFValue(15)}px ${RFValue(5)}px ${RFValue(15)}px;
 `;
 

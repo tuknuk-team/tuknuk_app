@@ -29,6 +29,7 @@ export const Avatar = styled.Image`
 export const ButtonDefault = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
+  width: ${RFValue(40)}px;
 `;
 
 export const ButtonDefaultBack = styled.TouchableOpacity`
