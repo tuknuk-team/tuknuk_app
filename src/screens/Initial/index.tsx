@@ -6,7 +6,7 @@ import {Container, Content, ContentButton} from './styles';
 
 import BG from '../../assets/global/png/bgInitial.png';
 
-import {Header} from '../../components/global/Header';
+import {HeaderNavigation} from '../../components/Headers/HeaderNavigation';
 import {Button} from '../../components/global/Button';
 
 export function Initial() {
@@ -22,7 +22,7 @@ export function Initial() {
 
   return (
     <Container source={BG}>
-      <Header title="Conecte-se" bg={false} type={true} />
+      <HeaderNavigation title="Conecte-se" bg={false} type={true} />
       <Content>
         {/* <LottieView
           source={require('../assets/animation.json')}

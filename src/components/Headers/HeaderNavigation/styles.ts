@@ -16,6 +16,8 @@ export const ButtonDefault = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
   padding: ${RFValue(45)}px;
+  height: ${RFValue(40)}px;
+  width: ${RFValue(40)}px;
 `;
 
 export const Content = styled.View<type>`

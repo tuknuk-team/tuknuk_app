@@ -8,13 +8,13 @@ import IconArrow from '../../../assets/global/svg/arrowBack.svg';
 import bgHeader from '../../../assets/global/png/bgHeader.png';
 
 type IPropsHeader = TouchableOpacityProps & {
-  title: string;
+  title?: string;
   type?: boolean;
   bg?: boolean;
   bt?: boolean;
 };
 
-export function Header({title, type, bg, bt, ...rest}: IPropsHeader) {
+export function HeaderNavigation({title, type, bg, bt, ...rest}: IPropsHeader) {
   const navigation = useNavigation();
 
   return (

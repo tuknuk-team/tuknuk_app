@@ -16,7 +16,7 @@ import {
 
 import BG from '../../../assets/global/png/bgContainer.png';
 
-import {Header} from '../../../components/global/Header';
+import {HeaderNavigation} from '../../../components/Headers/HeaderNavigation';
 import {Button} from '../../../components/global/Button';
 
 import {useNavigation} from '@react-navigation/native';
@@ -101,7 +101,7 @@ export function Verify() {
 
   return (
     <Container source={BG}>
-      <Header title="Conecte-se" bg={true} bt={true} />
+      <HeaderNavigation title="Conecte-se" bg={true} bt={true} />
       <ContentDescription>
         <Description>
           Insira o código de validação enviado para *****@gmail.com

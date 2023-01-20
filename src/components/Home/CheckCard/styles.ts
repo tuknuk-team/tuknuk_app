@@ -96,9 +96,9 @@ export const Street = styled.Text<variationCardProps>`
   ${({otherTheme}) =>
     otherTheme
       ? css`
-          font-size: ${RFValue(14)}px;
+          font-size: ${RFValue(12)}px;
         `
       : css`
-          font-size: ${RFValue(12)}px;
+          font-size: ${RFValue(11)}px;
         `};
 `;

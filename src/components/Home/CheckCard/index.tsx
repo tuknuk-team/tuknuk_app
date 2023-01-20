@@ -20,6 +20,7 @@ type IPropsButton = TouchableOpacityProps & {
   locationTitle: string;
   street: string;
   alternativeTheme: boolean;
+  handlePress: () => void;
 };
 
 export function CheckCard({
@@ -27,9 +28,10 @@ export function CheckCard({
   locationTitle,
   street,
   alternativeTheme,
+  handlePress,
 }: IPropsButton) {
   return (
-    <Container>
+    <Container onPress={handlePress}>
       <ContainerLinear otherTheme={alternativeTheme}>
         <ConectContent otherTheme={alternativeTheme}>
           <IconLocation width="18" height="24" />

@@ -16,11 +16,6 @@ export const ContentInput = styled.View`
   padding: ${RFValue(8)}px ${RFValue(10)}px;
   border-color: #707070;
   align-self: center;
-<<<<<<< Updated upstream
-=======
-  bottom: 0;
-  top: 210px;
->>>>>>> Stashed changes
   background-color: ${({theme}) => theme.colors.primary};
 `;
 
@@ -46,18 +41,9 @@ export const TextInput = styled.TextInput`
   color: ${({theme}) => theme.colors.colorText};
 `;
 
-export const Obfuscate = styled.View`
-  /* background-color: 'rgba(135, 137, 141, 0.9)'; */
-  width: 100%;
-  z-index: 1;
-  height: 100%;
-  position: absolute;
-  margin-top: ${RFValue(210)}px;
-`;
-
 export const Content = styled.View`
   color: 'rgba(0,0,0,0.9)';
-  padding: ${RFValue(22)}px;
+  /* padding: ${RFValue(22)}px; */
   margin-top: ${RFValue(20)}px;
   flex: 1;
   margin-top: ${RFValue(10)}px;

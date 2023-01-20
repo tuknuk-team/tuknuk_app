@@ -13,7 +13,7 @@ import BG from '../../../assets/global/png/bgContainer.png';
 import IconEyeClose from '../../../assets/global/svg/iconEyeClosed.svg';
 import IconEye from '../../../assets/global/svg/iconEye.svg';
 
-import {Header} from '../../../components/global/Header';
+import {HeaderNavigation} from '../../../components/Headers/HeaderNavigation';
 import {Button} from '../../../components/global/Button';
 import {InputForm} from '../../../components/global/InputForm';
 
@@ -55,7 +55,7 @@ export function Validator() {
 
   return (
     <Container source={BG}>
-      <Header title="Conecte-se" bg={true} bt={true} />
+      <HeaderNavigation title="Conecte-se" bg={true} bt={true} />
       <ContentDescription>
         <Description>
           Insira seu email para receber o código de validação tuknuk.

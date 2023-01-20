@@ -12,7 +12,7 @@ import {Signin} from '../screens/Auth/Signin';
 import {Validator} from '../screens/Auth/Validator';
 import {Verify} from '../screens/Auth/Verify';
 import {HomeDesable} from '../screens/Lawsuit/HomeDesable';
-import {CompletAccount} from '../screens/Auth/CompletAccount';
+import {StepOne} from '../screens/Onboarding/StepOne';
 import {Initial} from '../screens/Initial';
 
 const Stack = createNativeStackNavigator();
@@ -47,8 +47,8 @@ export default function StackRoutes() {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="CompletAccount"
-          component={CompletAccount}
+          name="StepOne"
+          component={StepOne}
           options={{headerShown: false}}
         />
         <Stack.Screen

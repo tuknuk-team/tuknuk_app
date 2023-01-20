@@ -14,7 +14,7 @@ import BG from '../../../assets/global/png/bgContainer.png';
 import IconEyeClose from '../../../assets/global/svg/iconEyeClosed.svg';
 import IconEye from '../../../assets/global/svg/iconEye.svg';
 
-import {Header} from '../../../components/global/Header';
+import {HeaderNavigation} from '../../../components/Headers/HeaderNavigation';
 import {Button} from '../../../components/global/Button';
 import {InputForm} from '../../../components/global/InputForm';
 
@@ -62,7 +62,7 @@ export function Signin() {
 
   return (
     <Container source={BG}>
-      <Header title="Login" bg={true} bt={true} />
+      <HeaderNavigation title="Login" bg={true} bt={true} />
       <ContentButton>
         <Button
           title="Email"

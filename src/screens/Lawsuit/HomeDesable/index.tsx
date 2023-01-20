@@ -19,8 +19,8 @@ import IconSearch from '../../../assets/Tab/svg/iconSearch.svg';
 import IconClose from '../../../assets/Tab/svg/iconClose.svg';
 
 import {Establishment} from '../../../components/Home/Establishment';
-import {HeaderUser} from '../../../components/global/HeaderUser';
-import {CheckCard} from '../../../components/global/CheckCard';
+import {HeaderUser} from '../../../components/Headers/HeaderUser';
+import {CheckCard} from '../../../components/Home/CheckCard';
 
 export function HomeDesable() {
   const navigation = useNavigation();
@@ -55,7 +55,7 @@ export function HomeDesable() {
           locationTitle="Lucca Cafés Especiais"
           street="Complete seu cadastro para começar suas conexões "
           alternativeTheme={true}
-          onPress={() => handleNavigation('CompletAccount')}
+          handlePress={() => handleNavigation('StepOne')}
         />
       </ContentValidate>
       {/* <Obfuscate /> */}

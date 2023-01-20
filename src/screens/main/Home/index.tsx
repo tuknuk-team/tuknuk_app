@@ -5,7 +5,7 @@ import Bg from '../../../assets/global/png/bgContainer.png';
 import IconSearch from '../../../assets/Tab/svg/iconSearch.svg';
 import IconClose from '../../../assets/Tab/svg/iconClose.svg';
 
-import {HeaderUser} from '../../../components/global/HeaderUser';
+import {HeaderUser} from '../../../components/Headers/HeaderUser';
 
 import {
   Container,
