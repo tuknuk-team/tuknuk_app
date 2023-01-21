@@ -13,6 +13,7 @@ import {Validator} from '../screens/Auth/Validator';
 import {Verify} from '../screens/Auth/Verify';
 import {HomeDesable} from '../screens/Lawsuit/HomeDesable';
 import {StepOne} from '../screens/Onboarding/StepOne';
+import {StepTwo} from '../screens/Onboarding/StepTwo';
 import {Initial} from '../screens/Initial';
 
 const Stack = createNativeStackNavigator();
@@ -23,7 +24,7 @@ export default function StackRoutes() {
       <Navigator initialRouteName="Initial">
         <Stack.Screen
           name="Initial"
-          component={Initial}
+          component={StepOne}
           options={{headerShown: false}}
         />
         <Stack.Screen
@@ -49,6 +50,11 @@ export default function StackRoutes() {
         <Stack.Screen
           name="StepOne"
           component={StepOne}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="StepTwo"
+          component={StepTwo}
           options={{headerShown: false}}
         />
         <Stack.Screen

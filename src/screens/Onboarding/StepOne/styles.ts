@@ -6,6 +6,11 @@ export const Container = styled.ImageBackground`
   flex: 1;
 `;
 
+export const FormatContent = styled.View`
+  margin-top: ${RFValue(30)}px;
+  margin-bottom: ${RFValue(43)}px;
+`;
+
 export const ContentDescription = styled.View`
   align-items: center;
   justify-content: center;
@@ -42,4 +47,24 @@ export const ContentFooter = styled.View`
   margin-bottom: ${RFValue(70)}px;
   align-items: center;
   justify-content: flex-end;
+`;
+
+//
+export const Content = styled.ScrollView.attrs({
+  showsVerticalScrollIndicator: false,
+})`
+  padding: 0px 40px;
+`;
+
+export const Title = styled.Text`
+  font-family: ${({theme}) => theme.fonts.regular};
+  font-size: ${RFValue(16)}px;
+  color: ${({theme}) => theme.colors.colorText};
+  text-align: center;
+  margin-bottom: ${RFValue(58)}px;
+`;
+
+export const InputContent = styled.View`
+  margin-bottom: ${RFValue(25)}px;
+  /* margin-top: ${RFValue(50)}px; */
 `;
