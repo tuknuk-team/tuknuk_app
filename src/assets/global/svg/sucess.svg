@@ -1,0 +1,10 @@
+<svg id="Grupo_7683" data-name="Grupo 7683" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="99.918" height="99.918" viewBox="0 0 99.918 99.918">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#50a2fd"/>
+      <stop offset="1" stop-color="#775afc"/>
+    </linearGradient>
+  </defs>
+  <path id="Caminho_2912" data-name="Caminho 2912" d="M0,0H99.918V99.918H0Z" fill="none"/>
+  <path id="Caminho_2913" data-name="Caminho 2913" d="M43.632,2A41.632,41.632,0,1,0,85.265,43.632,41.648,41.648,0,0,0,43.632,2Zm0,74.938A33.306,33.306,0,1,1,76.938,43.632,33.35,33.35,0,0,1,43.632,76.938ZM59.786,28.187l-24.48,24.48L27.479,44.84a4.151,4.151,0,0,0-5.87,5.87L32.392,61.493a4.146,4.146,0,0,0,5.87,0L65.7,34.057a4.146,4.146,0,0,0,0-5.87,4.2,4.2,0,0,0-5.912,0Z" transform="translate(6.326 6.326)" fill="url(#linear-gradient)"/>
+</svg>
