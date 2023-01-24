@@ -9,7 +9,6 @@ import BG from '../../../assets/global/png/bgOnboarding.png';
 import {HeaderNavigation} from '../../../components/Headers/HeaderNavigation';
 
 import {useNavigation} from '@react-navigation/native';
-
 import * as Yup from 'yup';
 import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
@@ -21,6 +20,7 @@ import {InputForm} from '../../../components/global/InputForm';
 import {ViewLinear} from '../../Auth/Signin/styles';
 
 export function StepOne() {
+  const navigation = useNavigation();
   const schema = Yup.object({
     name: Yup.string().required('Informe seu nome'),
   });
@@ -107,6 +107,7 @@ export function StepOne() {
           title="Continuar"
           type={true}
           full={true}
+          onPress={() => navigation.navigate('StepTwo')}
         />
       </Content>
     </Container>

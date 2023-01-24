@@ -50,10 +50,10 @@ export function ProfileSelector({text, photo, type}: Props) {
           <Female>
             <FemaleText>Feminino</FemaleText>
           </Female>
-          <Other>
+          {/* <Other>
             <OtherText>Outro</OtherText>
             <ArrowRight>&gt;</ArrowRight>
-          </Other>
+          </Other> */}
         </SelectGenre>
       </AddPhoto>
     </Container>

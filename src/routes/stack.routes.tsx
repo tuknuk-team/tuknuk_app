@@ -26,7 +26,7 @@ export default function StackRoutes() {
       <Navigator initialRouteName="Initial">
         <Stack.Screen
           name="Initial"
-          component={StepFour}
+          component={Initial}
           options={{headerShown: false}}
         />
         <Stack.Screen
@@ -66,7 +66,7 @@ export default function StackRoutes() {
         />
         <Stack.Screen
           name="StepFour"
-          component={StepThree}
+          component={StepFour}
           options={{headerShown: false}}
         />
         <Stack.Screen

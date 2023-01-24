@@ -2,11 +2,12 @@ import React from 'react';
 
 import {RFValue} from 'react-native-responsive-fontsize';
 
-import BG from '../../../assets/global/png/bgFooter.png';
+import BG from '../../../assets/global/png/bgOnboarding.png';
 
 import * as Yup from 'yup';
 import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
+import {useNavigation} from '@react-navigation/native';
 
 import {HeaderNavigation} from '../../../components/Headers/HeaderNavigation';
 import {InputForm} from '../../../components/global/InputForm';
@@ -16,6 +17,7 @@ import {Button} from '../../../components/global/Button';
 import {Container, Content, FormContent, SubTitle, Title} from './styles';
 
 export function StepTwo() {
+  const navigation = useNavigation();
   const schema = Yup.object({
     name: Yup.string().required('Informe seu nome'),
   });
@@ -74,6 +76,7 @@ export function StepTwo() {
             title="Continuar"
             type={true}
             full={true}
+            onPress={() => navigation.navigate('StepThree')}
           />
         </FormContent>
       </Content>
