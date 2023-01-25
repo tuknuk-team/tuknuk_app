@@ -22,35 +22,16 @@ import BG from '../../../assets/global/png/bgOnboarding.png';
 import {HeaderNavigation} from '../../../components/Headers/HeaderNavigation';
 
 import {useNavigation} from '@react-navigation/native';
-import * as Yup from 'yup';
-import {useForm} from 'react-hook-form';
-import {yupResolver} from '@hookform/resolvers/yup';
 import DatePicker from 'react-native-date-picker';
 
 // Components
 import {ProfileSelector} from '../../../components/Onboarding/ProfileSelector';
 import {Button} from '../../../components/global/Button';
-import {InputForm} from '../../../components/global/InputForm';
 import {ViewLinear} from '../../Auth/Signin/styles';
 import {Input} from '../../../components/global/Input';
 
-interface SelectGenreProps {
-  type: 'male' | 'female';
-}
-
-export function StepOne({type}: SelectGenreProps) {
+export function StepOne() {
   const navigation = useNavigation();
-  const schema = Yup.object({
-    name: Yup.string().required('Informe seu nome'),
-  });
-
-  const {
-    control,
-    // handleSubmit,
-    formState: {errors},
-  } = useForm<FormData>({
-    resolver: yupResolver(schema),
-  });
 
   const [date, setDate] = useState(new Date());
   const [dateOpen, setDateOpen] = useState(false);
