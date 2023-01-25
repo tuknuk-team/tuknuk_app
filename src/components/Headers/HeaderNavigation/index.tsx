@@ -2,19 +2,36 @@ import React from 'react';
 import {TouchableOpacityProps} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-import {Container, Content, Title, ButtonDefault, ContentBg} from './styles';
+import {
+  Container,
+  Content,
+  Title,
+  ButtonDefault,
+  ContentBg,
+  Logo,
+  LogoContent,
+} from './styles';
 
 import IconArrow from '../../../assets/global/svg/arrowBack.svg';
 import bgHeader from '../../../assets/global/png/bgHeader.png';
+import LogoTukNuk from '../../../assets/global/png/logo.png';
 
 type IPropsHeader = TouchableOpacityProps & {
   title?: string;
   type?: boolean;
   bg?: boolean;
   bt?: boolean;
+  showLogo?: boolean;
 };
 
-export function HeaderNavigation({title, type, bg, bt, ...rest}: IPropsHeader) {
+export function HeaderNavigation({
+  title,
+  type,
+  bg,
+  bt,
+  showLogo,
+  ...rest
+}: IPropsHeader) {
   const navigation = useNavigation();
 
   return (
@@ -29,6 +46,9 @@ export function HeaderNavigation({title, type, bg, bt, ...rest}: IPropsHeader) {
             ) : (
               <ButtonDefault />
             )}
+            <LogoContent showLogo={showLogo} type={type}>
+              <Logo source={LogoTukNuk} />
+            </LogoContent>
             <Title>{title}</Title>
             <ButtonDefault />
           </Content>
@@ -43,6 +63,9 @@ export function HeaderNavigation({title, type, bg, bt, ...rest}: IPropsHeader) {
             ) : (
               <ButtonDefault />
             )}
+            <LogoContent showLogo={showLogo} type={type}>
+              <Logo source={LogoTukNuk} />
+            </LogoContent>
             <Title>{title}</Title>
             <ButtonDefault />
           </Content>

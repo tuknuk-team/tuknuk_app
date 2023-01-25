@@ -23,7 +23,7 @@ const Stack = createNativeStackNavigator();
 export default function StackRoutes() {
   return (
     <NavigationContainer>
-      <Navigator initialRouteName="StepOne">
+      <Navigator initialRouteName="StepFour">
         <Stack.Screen
           name="Initial"
           component={Initial}

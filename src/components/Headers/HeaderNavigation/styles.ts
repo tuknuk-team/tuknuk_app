@@ -4,6 +4,7 @@ import {getStatusBarHeight} from 'react-native-iphone-x-helper';
 
 interface type {
   type: boolean;
+  showLogo?: boolean;
 }
 
 export const Container = styled.View``;
@@ -37,3 +38,25 @@ export const Title = styled.Text`
   color: ${({theme}) => theme.colors.textButton};
   font-family: ${({theme}) => theme.fonts.semiBold};
 `;
+
+export const LogoContent = styled.View<type>`
+  width: ${RFValue(70)}px;
+  padding-top: ${RFValue(40)}px;
+
+  ${({showLogo}) =>
+    showLogo === true &&
+    css`
+      display: flex;
+    `}
+  ${({showLogo}) =>
+    showLogo !== true &&
+    css`
+      display: none;
+    `}
+  ${({type}) =>
+    type &&
+    css`
+      padding-top: ${RFValue(-40)}px;
+    `}
+`;
+export const Logo = styled.Image``;

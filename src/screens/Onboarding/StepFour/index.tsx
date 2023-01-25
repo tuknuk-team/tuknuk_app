@@ -11,7 +11,7 @@ import {Container, Content} from './styles';
 export function StepFour() {
   return (
     <Container source={BG}>
-      <HeaderNavigation bt={true} bg={true} />
+      <HeaderNavigation bt={true} bg={true} showLogo={true} />
       <Content>
         <SucessStep
           title="Parabéns"

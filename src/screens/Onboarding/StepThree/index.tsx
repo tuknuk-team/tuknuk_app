@@ -3,6 +3,7 @@ import React from 'react';
 import BG from '../../../assets/global/png/bgFooter.png';
 
 import {HeaderNavigation} from '../../../components/Headers/HeaderNavigation';
+import {useNavigation} from '@react-navigation/native';
 import {RFValue} from 'react-native-responsive-fontsize';
 
 import {Button} from '../../../components/global/Button';
@@ -19,6 +20,7 @@ import {
 } from './styles';
 
 export function StepThree() {
+  const navigation = useNavigation();
   return (
     <Container source={BG}>
       <HeaderNavigation bt={true} />
@@ -55,6 +57,7 @@ export function StepThree() {
         title="Continuar"
         full={true}
         type={true}
+        onPress={() => navigation.navigate('StepFour')}
         style={{
           paddingLeft: RFValue(35),
           paddingRight: RFValue(35),
