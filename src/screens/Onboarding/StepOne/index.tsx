@@ -54,6 +54,7 @@ export function StepOne({type}: SelectGenreProps) {
 
   const [date, setDate] = useState(new Date());
   const [dateOpen, setDateOpen] = useState(false);
+  const [showDate, setShowDate] = useState('');
 
   const [genreType, setGenreType] = useState('');
 
@@ -72,11 +73,13 @@ export function StepOne({type}: SelectGenreProps) {
       <Content>
         <Title>Complete seu cadastro para começar suas conexões</Title>
 
-        <ProfileSelector
-          text="Adicionar foto"
-          type="selectPhoto"
-          photo={require('../../../assets/global/png/otherIconAvatar.png')}
-        />
+        <InputContent>
+          <ProfileSelector
+            text="Adicionar foto"
+            type="selectPhoto"
+            photo={require('../../../assets/global/png/otherIconAvatar.png')}
+          />
+        </InputContent>
 
         <InputContent>
           <Input placeholder="Name" placeholderTextColor={'#707070'} />
@@ -96,7 +99,7 @@ export function StepOne({type}: SelectGenreProps) {
             text="Data de nascimento"
             type="selectDate"
             datePress={() => setDateOpen(true)}
-            dateValue={date.toLocaleDateString()}
+            dateValue={showDate}
           />
           <DatePicker
             modal
@@ -109,8 +112,9 @@ export function StepOne({type}: SelectGenreProps) {
             locale="pt"
             onDateChange={setDate}
             onConfirm={date => {
-              setDateOpen(true);
+              setDateOpen(false);
               setDate(date);
+              setShowDate(date.toLocaleDateString());
             }}
             onCancel={() => {
               setDateOpen(false);
