@@ -5,9 +5,7 @@ export const Container = styled.ImageBackground`
   flex: 1;
 `;
 
-export const Content = styled.ScrollView.attrs({
-  showsVerticalScrollIndicator: false,
-})`
+export const Content = styled.View`
   padding: 0px ${RFValue(43)}px;
 `;
 
