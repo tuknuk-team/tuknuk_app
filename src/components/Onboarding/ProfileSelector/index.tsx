@@ -2,17 +2,9 @@ import React from 'react';
 
 import {
   AddPhoto,
-  ArrowRight,
   Container,
   DateViewLinear,
-  Female,
-  FemaleText,
-  Male,
-  MaleText,
-  Other,
-  OtherText,
   SelectDate,
-  SelectGenre,
   SelectProfilePhoto,
   Title,
   UserPhoto,
@@ -20,11 +12,19 @@ import {
 
 interface Props {
   text: string;
-  photo: any;
+  photo?: any;
   type: 'selectPhoto' | 'selectDate' | 'selectGenre';
+  datePress?: any;
+  dateValue?: string;
 }
 
-export function ProfileSelector({text, photo, type}: Props) {
+export function ProfileSelector({
+  text,
+  photo,
+  type,
+  datePress,
+  dateValue,
+}: Props) {
   return (
     <Container>
       <Title>{text}</Title>
@@ -39,22 +39,11 @@ export function ProfileSelector({text, photo, type}: Props) {
           placeholder="DD / MM / YYYY"
           placeholderTextColor={'#707070'}
           keyboardType="number-pad"
+          onPressIn={datePress}
+          value={dateValue}
         />
 
         <DateViewLinear type={type} />
-
-        <SelectGenre type={type}>
-          <Male>
-            <MaleText>Masculino</MaleText>
-          </Male>
-          <Female>
-            <FemaleText>Feminino</FemaleText>
-          </Female>
-          {/* <Other>
-            <OtherText>Outro</OtherText>
-            <ArrowRight>&gt;</ArrowRight>
-          </Other> */}
-        </SelectGenre>
       </AddPhoto>
     </Container>
   );

@@ -2,7 +2,20 @@ import React, {useState} from 'react';
 
 import {RFValue} from 'react-native-responsive-fontsize';
 
-import {Container, Content, FormatContent, InputContent, Title} from './styles';
+import {
+  Container,
+  Content,
+  Female,
+  FemaleText,
+  FormatContent,
+  GenreTitle,
+  InputContent,
+  Male,
+  MaleText,
+  GenreContent,
+  Title,
+  ContainerGenre,
+} from './styles';
 
 import BG from '../../../assets/global/png/bgOnboarding.png';
 
@@ -12,14 +25,20 @@ import {useNavigation} from '@react-navigation/native';
 import * as Yup from 'yup';
 import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
+import DatePicker from 'react-native-date-picker';
 
 // Components
 import {ProfileSelector} from '../../../components/Onboarding/ProfileSelector';
 import {Button} from '../../../components/global/Button';
 import {InputForm} from '../../../components/global/InputForm';
 import {ViewLinear} from '../../Auth/Signin/styles';
+import {Input} from '../../../components/global/Input';
 
-export function StepOne() {
+interface SelectGenreProps {
+  type: 'male' | 'female';
+}
+
+export function StepOne({type}: SelectGenreProps) {
   const navigation = useNavigation();
   const schema = Yup.object({
     name: Yup.string().required('Informe seu nome'),
@@ -32,6 +51,19 @@ export function StepOne() {
   } = useForm<FormData>({
     resolver: yupResolver(schema),
   });
+
+  const [date, setDate] = useState(new Date());
+  const [dateOpen, setDateOpen] = useState(false);
+
+  const [genreType, setGenreType] = useState('');
+
+  function setMale() {
+    setGenreType('male');
+  }
+
+  function setFemale() {
+    setGenreType('female');
+  }
 
   return (
     <Container source={BG}>
@@ -47,20 +79,12 @@ export function StepOne() {
         />
 
         <InputContent>
-          <InputForm
-            name="name"
-            control={control}
-            placeholder="Nome"
-            placeholderTextColor={'#707070'}
-            style={{marginTop: RFValue(50)}}
-          />
+          <Input placeholder="Name" placeholderTextColor={'#707070'} />
           <ViewLinear />
         </InputContent>
 
         <InputContent>
-          <InputForm
-            name="username"
-            control={control}
+          <Input
             placeholder="Nome de usuário"
             placeholderTextColor={'#707070'}
           />
@@ -71,22 +95,45 @@ export function StepOne() {
           <ProfileSelector
             text="Data de nascimento"
             type="selectDate"
-            photo={require('../../../assets/global/png/otherIconAvatar.png')}
+            datePress={() => setDateOpen(true)}
+            dateValue={date.toLocaleDateString()}
+          />
+          <DatePicker
+            modal
+            title="Selecionar data de nascimento"
+            confirmText="Selecionar"
+            cancelText="Cancelar"
+            mode="date"
+            date={date}
+            open={dateOpen}
+            locale="pt"
+            onDateChange={setDate}
+            onConfirm={date => {
+              setDateOpen(true);
+              setDate(date);
+            }}
+            onCancel={() => {
+              setDateOpen(false);
+            }}
           />
         </FormatContent>
 
-        <FormatContent>
-          <ProfileSelector
-            text="Gênero"
-            type="selectGenre"
-            photo={require('../../../assets/global/png/otherIconAvatar.png')}
-          />
-        </FormatContent>
+        <GenreContent>
+          <GenreTitle>Gênero</GenreTitle>
+          <ContainerGenre onPress={() => setMale()}>
+            <Male type={genreType}>
+              <MaleText>Masculino</MaleText>
+            </Male>
+          </ContainerGenre>
+          <ContainerGenre onPress={() => setFemale()}>
+            <Female type={genreType}>
+              <FemaleText>Feminino</FemaleText>
+            </Female>
+          </ContainerGenre>
+        </GenreContent>
 
         <FormatContent>
-          <InputForm
-            name="bio"
-            control={control}
+          <Input
             placeholder="Bio"
             placeholderTextColor={'#707070'}
             multiline={true}
@@ -94,10 +141,10 @@ export function StepOne() {
               borderWidth: 1,
               borderColor: '#2FA5FB',
               borderRadius: 11,
-              paddingTop: 18,
-              paddingLeft: 18,
-              paddingRight: 18,
-              paddingBottom: 138,
+              paddingTop: RFValue(18),
+              paddingLeft: RFValue(18),
+              paddingRight: RFValue(18),
+              paddingBottom: RFValue(138),
             }}
           />
         </FormatContent>

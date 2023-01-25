@@ -2,13 +2,16 @@ import styled from 'styled-components/native';
 import {RFValue} from 'react-native-responsive-fontsize';
 import LinearGradient from 'react-native-linear-gradient';
 
+interface Props {
+  type: 'male' | 'female';
+}
+
 export const Container = styled.ImageBackground`
   flex: 1;
 `;
 
 export const FormatContent = styled.View`
-  margin-top: ${RFValue(30)}px;
-  margin-bottom: ${RFValue(43)}px;
+  margin-top: ${RFValue(20)}px;
 `;
 
 export const ContentDescription = styled.View`
@@ -65,6 +68,54 @@ export const Title = styled.Text`
 `;
 
 export const InputContent = styled.View`
-  margin-bottom: ${RFValue(25)}px;
-  /* margin-top: ${RFValue(50)}px; */
+  margin-bottom: ${RFValue(10)}px;
+`;
+
+// Genre
+export const GenreContent = styled.View`
+  margin-top: ${RFValue(30)}px;
+`;
+
+export const GenreTitle = styled.Text`
+  font-family: ${({theme}) => theme.fonts.bold};
+  color: ${({theme}) => theme.colors.colorText};
+  font-size: ${RFValue(13)}px;
+  margin-bottom: ${RFValue(20)}px;
+`;
+
+export const ContainerGenre = styled.TouchableOpacity``;
+
+export const Male = styled(LinearGradient).attrs<Props>(props => ({
+  colors:
+    props.type === 'male' ? ['#7F4AFC', '#4AAEFD'] : ['#243561', '#36477B'],
+  start: {x: 1, y: 1},
+  end: {x: 0, y: 1},
+}))`
+  background-color: ${({theme}) => theme.colors.primary};
+  padding: ${RFValue(12)}px ${RFValue(70)}px;
+  border-radius: 7px;
+  margin-bottom: ${RFValue(9)}px;
+`;
+export const Female = styled(LinearGradient).attrs<Props>(props => ({
+  colors:
+    props.type === 'female' ? ['#7F4AFC', '#4AAEFD'] : ['#243561', '#36477B'],
+  start: {x: 1, y: 1},
+  end: {x: 0, y: 1},
+}))`
+  background-color: ${({theme}) => theme.colors.primary};
+  padding: ${RFValue(12)}px ${RFValue(70)}px;
+  border-radius: 7px;
+`;
+
+export const MaleText = styled.Text`
+  font-family: ${({theme}) => theme.fonts.regular};
+  font-size: ${RFValue(13)}px;
+  color: ${({theme}) => theme.colors.colorText};
+  text-align: center;
+`;
+export const FemaleText = styled.Text`
+  font-family: ${({theme}) => theme.fonts.regular};
+  font-size: ${RFValue(13)}px;
+  color: ${({theme}) => theme.colors.colorText};
+  text-align: center;
 `;
