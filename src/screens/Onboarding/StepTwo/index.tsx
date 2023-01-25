@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
+
+import {useNavigation} from '@react-navigation/native';
 
 import {RFValue} from 'react-native-responsive-fontsize';
 
@@ -7,7 +9,7 @@ import BG from '../../../assets/global/png/bgOnboarding.png';
 import * as Yup from 'yup';
 import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
-import {useNavigation} from '@react-navigation/native';
+import DatePicker from 'react-native-date-picker';
 
 import {HeaderNavigation} from '../../../components/Headers/HeaderNavigation';
 import {InputForm} from '../../../components/global/InputForm';
@@ -29,6 +31,10 @@ export function StepTwo() {
   } = useForm<FormData>({
     resolver: yupResolver(schema),
   });
+
+  const [date, setDate] = useState(new Date());
+  const [dateOpen, setDateOpen] = useState<boolean>(false);
+  const [showDate, setShowDate] = useState('');
 
   return (
     <Container source={BG}>
@@ -69,6 +75,27 @@ export function StepTwo() {
             placeholderTextColor={'#707070'}
             style={{marginTop: RFValue(27)}}
             keyboardType="number-pad"
+            value={showDate}
+            onPressIn={() => setDateOpen(true)}
+          />
+          <DatePicker
+            modal
+            title="Selecionar data de início"
+            confirmText="Selecionar"
+            cancelText="Cancelar"
+            mode="date"
+            locale="pt"
+            date={date}
+            open={dateOpen}
+            onDateChange={setDate}
+            onConfirm={date => {
+              setDateOpen(false);
+              setDate(date);
+              setShowDate(date.toLocaleDateString());
+            }}
+            onCancel={() => {
+              setDateOpen(false);
+            }}
           />
           <ViewLinear />
           <Button
