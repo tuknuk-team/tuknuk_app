@@ -1,21 +1,19 @@
 import React from 'react';
 
-import {Container, Interest, InterestOption, Title} from './styles';
+import {Container, InterestOption, Title} from './styles';
+import {TouchableOpacityProps} from 'react-native';
 
-interface Props {
+type Props = TouchableOpacityProps & {
   title: string;
   isSelected?: boolean;
-  style?: any;
-}
+};
 
-export function InterestsSelector({title, isSelected, style}: Props) {
+export function InterestsSelector({title, isSelected, ...rest}: Props) {
   return (
-    <Container style={style}>
-      <Interest>
-        <InterestOption isSelected={isSelected}>
-          <Title>{title}</Title>
-        </InterestOption>
-      </Interest>
+    <Container {...rest}>
+      <InterestOption isSelected={isSelected}>
+        <Title>{title}</Title>
+      </InterestOption>
     </Container>
   );
 }

@@ -6,12 +6,11 @@ interface Props {
   isSelected?: boolean;
 }
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity<Props>`
   margin-bottom: ${RFValue(10)}px;
   margin-left: 8px;
+  align-items: center;
 `;
-
-export const Interest = styled.TouchableOpacity``;
 
 export const InterestOption = styled(LinearGradient).attrs<Props>(props => ({
   colors: props.isSelected ? ['#7F4AFC', '#4AAEFD'] : ['#243561', '#36477B'],
@@ -22,7 +21,6 @@ export const InterestOption = styled(LinearGradient).attrs<Props>(props => ({
   border-radius: 16px;
   justify-content: center;
   align-items: center;
-  width: ${RFValue(95)}px;
 `;
 
 export const Title = styled.Text`

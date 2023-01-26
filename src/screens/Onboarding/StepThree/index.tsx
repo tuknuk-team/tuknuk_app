@@ -21,6 +21,7 @@ import {
 
 export function StepThree() {
   const navigation = useNavigation();
+
   return (
     <Container source={BG}>
       <HeaderNavigation bt={true} />
@@ -37,15 +38,15 @@ export function StepThree() {
           <InterestsSelector title="Design" />
           <InterestsSelector title="Cafés" />
           <InterestsSelector title="Investimento" />
-          <InterestsSelector title="Teatro" isSelected={true} />
+          <InterestsSelector title="Teatro" />
           <InterestsSelector title="Arte" />
-          <InterestsSelector title="Filmes" isSelected={true} />
+          <InterestsSelector title="Filmes" />
           <InterestsSelector title="Arquitetura" />
           <InterestsSelector title="Animais" />
           <InterestsSelector title="Livros" />
-          <InterestsSelector title="Finanças" />
+          <InterestsSelector title="Finanças" isSelected={true} />
           <InterestsSelector title="Restaurantes" />
-          <InterestsSelector title="Esportes" />
+          <InterestsSelector title="Esportes" isSelected={true} />
           <InterestsSelector title="Podcasts" />
           <InterestsSelector title="Finanças" />
           <InterestsSelector title="Artes" />
